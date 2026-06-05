@@ -31,6 +31,11 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 </head>
 <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-logo">HAMUTEC</div>
+        <div class="loader-spinner"></div>
+    </div>
 
     <!-- NAVBAR -->
     <header class="navbar" id="navbar">
@@ -106,7 +111,7 @@
                         Soluções inteligentes de segurança: Câmeras, alarmes, cercas elétricas e infraestrutura de redes com tecnologia de ponta.
                     </p>
                     <div class="hero-btns reveal">
-                        <a href="https://wa.me/244921449989" target="_blank" class="btn btn-primary btn-lg">
+                        <a href="https://wa.me/244921449989" target="_blank" class="btn btn-primary btn-lg" rel="noopener noreferrer">
                             Pedir Orçamento <span class="arrow">→</span>
                         </a>
                         <a href="#servicos" class="btn btn-secondary btn-lg">
@@ -541,8 +546,203 @@
             </div>
         </section>
 
+        <!-- DIFERENCIAIS SECTION -->
+        <section id="porque-nos" class="features section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-label">Vantagens</span>
+                    <h2 class="section-title">Porque Escolher a Hamutec?</h2>
+                    <p class="section-subtitle">Compromisso com a excelência e a segurança total do seu património.</p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Diferencial 1 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg>
+                        </div>
+                        <h3 class="feature-card-title">Instalação Rápida</h3>
+                        <p class="feature-card-text">Concluímos o seu projeto em 1 a 5 dias úteis, garantindo agilidade sem comprometer a qualidade.</p>
+                    </div>
+
+                    <!-- Diferencial 2 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </div>
+                        <h3 class="feature-card-title">Rigor Técnico</h3>
+                        <p class="feature-card-text">Equipamentos testados, cablagem organizada e sistemas configurados ao pormenor para máxima fiabilidade.</p>
+                    </div>
+
+                    <!-- Diferencial 3 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <h3 class="feature-card-title">Suporte Dedicado</h3>
+                        <p class="feature-card-text">Assistência técnica contínua e suporte pós-instalação para que nunca se sinta desprotegido.</p>
+                    </div>
+
+                    <!-- Diferencial 4 -->
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <h3 class="feature-card-title">Presença Local</h3>
+                        <p class="feature-card-text">Sediados no Lubango, oferecemos resposta imediata e visitas técnicas presenciais sempre que necessário.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO SECTION -->
+        <section id="contacto" class="contact section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-label">Fale Connosco</span>
+                    <h2 class="section-title">Entre em Contacto</h2>
+                    <p class="section-subtitle">Estamos prontos para ajudar a proteger o seu espaço.</p>
+                </div>
+
+                <div class="contact-container">
+                    <!-- Formulário -->
+                    <div class="contact-form reveal">
+                        <form id="whatsapp-form">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" placeholder="Seu número de telefone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Serviço de Interesse</label>
+                                <select id="service" required>
+                                    <option value="" disabled selected>Selecione um serviço</option>
+                                    <option value="Alarmes">Sistema de Alerta (Alarmes)</option>
+                                    <option value="Câmeras Wi-Fi">Câmeras Wi-Fi</option>
+                                    <option value="CCTV Cabeado">CCTV Cabeado (DVR)</option>
+                                    <option value="Cerca Elétrica">Cerca Elétrica</option>
+                                    <option value="Redes/Automação">Redes ou Automação</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full">
+                                Enviar pelo WhatsApp <span class="icon">💬</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Informações -->
+                    <div class="contact-info reveal">
+                        <div class="info-card">
+                            <div class="info-item">
+                                <div class="info-icon">📍</div>
+                                <div class="info-text">
+                                    <h4>Nossa Morada</h4>
+                                    <p>Bairro Mapunda, Zona 6A, Rua Principal do Pululukwa, Lubango — Angola</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">📞</div>
+                                <div class="info-text">
+                                    <h4>Telefone</h4>
+                                    <p><a href="tel:921449989">921 449 989</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">💬</div>
+                                <div class="info-text">
+                                    <h4>WhatsApp</h4>
+                                    <p><a href="https://wa.me/244921449989" target="_blank">921 449 989</a></p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">⏰</div>
+                                <div class="info-text">
+                                    <h4>Horário de Funcionamento</h4>
+                                    <p>Segunda a Sábado: 08h – 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="response-badge">
+                            <span class="pulse-dot"></span>
+                            Resposta em menos de 2 horas durante o horário de funcionamento
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- As próximas seções serão inseridas aqui -->
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Coluna 1: Marca -->
+            <div class="footer-col brand">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-text">HAMUTEC</span>
+                </a>
+                <p class="footer-slogan">Tecnologia. Segurança. Inteligência.</p>
+                <p class="footer-desc">Protegendo o que mais importa para si com soluções de vanguarda em Lubango, Angola.</p>
+            </div>
+
+            <!-- Coluna 2: Serviços -->
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul class="footer-links">
+                    <li><a href="#servicos">Sistema de Alerta</a></li>
+                    <li><a href="#servicos">Câmeras Wi-Fi</a></li>
+                    <li><a href="#servicos">CCTV Cabeado</a></li>
+                    <li><a href="#servicos">Cerca Elétrica</a></li>
+                    <li><a href="#servicos">Redes Informáticas</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Contacto -->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul class="footer-contact">
+                    <li>📍 Bairro Mapunda, Rua Principal do Pululukwa, Lubango</li>
+                    <li>📞 921 449 989</li>
+                    <li>⏰ Seg - Sáb: 08h – 18h</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 Hamutec — Segurança Eletrónica. Todos os direitos reservados. · Lubango, Angola</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/244921449989" class="whatsapp-float" target="_blank" aria-label="Falar connosco pelo WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+        </svg>
+        <span class="tooltip">Falar connosco</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/whatsapp.js"></script>
+    <script src="js/three-bg.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+body>
+</html>
+.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+        </svg>
+        <span class="tooltip">Falar connosco</span>
+    </a>
 
     <!-- Scripts -->
     <script src="js/whatsapp.js"></script>

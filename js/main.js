@@ -7,6 +7,14 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Preloader
+    const preloader = document.getElementById('preloader');
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+        }, 500);
+    });
+
     // 1. Scroll da Navbar
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
