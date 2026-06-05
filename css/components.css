@@ -7,9 +7,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* Botões */
@@ -27,11 +24,12 @@
 .btn-primary {
     background: var(--gradient-btn);
     color: var(--text-white);
+    box-shadow: 0 4px 15px rgba(0, 71, 255, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 6px 20px rgba(0, 71, 255, 0.4);
 }
 
 .w-full { width: 100%; }
@@ -43,14 +41,22 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 24px 0;
     transition: 0.4s ease;
     background: transparent;
 }
 
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .navbar.scrolled {
-    background: #0A0F2C;
-    padding: 12px 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 16px 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid var(--border);
 }
 
@@ -78,12 +84,12 @@
 
 .nav-link {
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-muted);
 }
 
 .nav-link:hover, .nav-link.active {
-    color: var(--text-white);
+    color: var(--primary);
 }
 
 .nav-actions {
@@ -95,7 +101,7 @@
 .menu-toggle {
     display: none;
     background: transparent;
-    color: var(--text-white);
+    color: var(--text-dark);
 }
 
 .menu-toggle svg {
@@ -108,16 +114,16 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 80%;
-    max-width: 350px;
+    width: 85%;
+    max-width: 320px;
     height: 100%;
-    background: var(--bg-card);
+    background: var(--bg-white);
     z-index: 1100;
     padding: 40px 24px;
     display: flex;
     flex-direction: column;
     transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
 }
 
 .nav-drawer.open {
@@ -133,7 +139,7 @@
 
 .close-toggle {
     background: transparent;
-    color: var(--text-white);
+    color: var(--text-dark);
 }
 
 .close-toggle svg {
@@ -150,7 +156,12 @@
 .drawer-link {
     font-size: 1.25rem;
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.drawer-link:hover {
+    color: var(--primary);
 }
 
 .drawer-footer {
@@ -163,7 +174,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(5, 10, 26, 0.8);
+    background: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(4px);
     z-index: 1050;
     opacity: 0;
@@ -186,4 +197,3 @@
         display: block;
     }
 }
-

@@ -1,18 +1,20 @@
 :root {
-  /* Paleta de Cores */
+  /* Paleta de Cores (Light Mode) */
   --primary:       #0047FF;
   --primary-dark:  #0033CC;
-  --bg-dark:       #050A1A;
-  --bg-card:       #0A0F2C;
-  --bg-section:    #080D22;
-  --text-white:    #FFFFFF;
-  --text-muted:    #8A9BC0;
-  --border:        rgba(0, 71, 255, 0.2);
+  --bg-white:      #FFFFFF;
+  --bg-light:      #F8FAFC;
+  --bg-card:       #FFFFFF;
+  --bg-section:    #F1F5F9;
+  --text-dark:     #0F172A;
+  --text-muted:    #64748B;
+  --border:        rgba(0, 71, 255, 0.1);
   
   /* Gradientes e Efeitos */
-  --gradient-hero: linear-gradient(135deg, #050A1A 0%, #0A0F2C 50%, #0D1A4A 100%);
+  --gradient-hero: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
   --gradient-btn:  linear-gradient(90deg, #0047FF, #0033CC);
-  --shadow-glow:   0 0 40px rgba(0, 71, 255, 0.3);
+  --shadow-glow:   0 10px 30px rgba(0, 71, 255, 0.15);
+  --shadow-card:   0 4px 20px rgba(0, 0, 0, 0.05);
 
   /* Tipografia */
   --font-display: 'Syne', sans-serif;

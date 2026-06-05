@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderer = new THREE.WebGLRenderer({
         canvas: canvas,
         alpha: true,
-        antialias: !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+        antialias: true
     });
 
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(networkGroup);
 
     // Criação dos Pontos (Sensores)
-    const pointsCount = 120;
-    const pointsGeometry = new THREE.SphereGeometry(0.08, 8, 8);
+    const pointsCount = 100;
+    const pointsGeometry = new THREE.SphereGeometry(0.1, 8, 8);
     const pointsMaterial = new THREE.MeshStandardMaterial({
         color: 0x0047FF,
-        emissive: 0x0033CC,
-        emissiveIntensity: 2
+        emissive: 0x0047FF,
+        emissiveIntensity: 0.5
     });
 
     const points = [];
@@ -47,33 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Adicionar luz para brilho dos pontos
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
     scene.add(ambientLight);
-    const pointLight = new THREE.PointLight(0x0047FF, 1);
+    const pointLight = new THREE.PointLight(0x0047FF, 2);
     pointLight.position.set(0, 0, 10);
     scene.add(pointLight);
 
-    // Pontos Ativos (Pulsação e Ondas)
-    const activePointsCount = 5;
-    const activePoints = [];
-    for (let i = 0; i < activePointsCount; i++) {
-        activePoints.push(points[Math.floor(Math.random() * points.length)]);
-    }
-
-    // Ondas (Anéis)
-    const rings = [];
-    const ringGeo = new THREE.RingGeometry(0.1, 0.15, 32);
-    const ringMat = new THREE.MeshBasicMaterial({ color: 0x0047FF, transparent: true, opacity: 0.5, side: THREE.DoubleSide });
-
-    activePoints.forEach(p => {
-        const ring = new THREE.Mesh(ringGeo, ringMat.clone());
-        ring.position.copy(p.position);
-        networkGroup.add(ring);
-        rings.push({ mesh: ring, scale: 1, opacity: 0.5 });
-    });
-
     // Linhas de Conexão
-    const linesMaterial = new THREE.LineBasicMaterial({ color: 0x0047FF, transparent: true, opacity: 0.15 });
+    const linesMaterial = new THREE.LineBasicMaterial({ color: 0x0047FF, transparent: true, opacity: 0.1 });
     const linePairs = [];
 
     // Otimização: conectar apenas pontos próximos
