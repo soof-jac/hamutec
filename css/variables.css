@@ -1,0 +1,20 @@
+:root {
+  /* Paleta de Cores */
+  --primary:       #0047FF;
+  --primary-dark:  #0033CC;
+  --bg-dark:       #050A1A;
+  --bg-card:       #0A0F2C;
+  --bg-section:    #080D22;
+  --text-white:    #FFFFFF;
+  --text-muted:    #8A9BC0;
+  --border:        rgba(0, 71, 255, 0.2);
+  
+  /* Gradientes e Efeitos */
+  --gradient-hero: linear-gradient(135deg, #050A1A 0%, #0A0F2C 50%, #0D1A4A 100%);
+  --gradient-btn:  linear-gradient(90deg, #0047FF, #0033CC);
+  --shadow-glow:   0 0 40px rgba(0, 71, 255, 0.3);
+
+  /* Tipografia */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
